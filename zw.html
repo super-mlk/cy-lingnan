@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>座位</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/default-skin/default-skin.css">
+    <link rel="stylesheet" href="css/photoswipe.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/photoswipe.min.js"></script>
+    <script src="js/photoswipe-ui-default.min.js"></script>
+</head>
+<style>
+    #container {
+        width: 100%;
+        min-height: 812px;
+        background: #e94620;
+    }
+
+    #container .content {
+        width: 100%;
+        min-height: 812px;
+        background: url("images/rc-bg.png") no-repeat;
+        background-size: 100% 812PX;
+        position: relative;
+    }
+
+    #container .content .theme {
+        width: 100%;
+        height: 217px;
+        position: relative;
+    }
+
+    #container .content .theme img {
+        width: 226px;
+        height: 87px;
+        position: absolute;
+        left: 30px;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+    }
+
+    /*日程*/
+    #container .content .rc {
+        width: 348px;
+        height: auto;
+        margin: 13px auto 0;
+    }
+
+    #container .content .rc .seatInfo {
+        width: 348px;
+        height: 58px;
+    }
+
+    #container .content .rc .seatInfo ul {
+        width: 348px;
+        height: 58px;
+    }
+
+    #container .content .rc .seatInfo ul li {
+        width: 174px;
+        height: 58px;
+        float: left;
+    }
+
+    #container .content .rc .seatInfo ul li:nth-child(1) {
+        text-align: right;
+    }
+
+    #container .content .rc .seatInfo ul li:nth-child(2) {
+        text-align: left;
+    }
+
+    #container .content .rc .seatInfo ul li span {
+        line-height: 58px;
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+        font-family: "微软雅黑";
+    }
+
+    #container .content .rc .seatPic {
+        width: 346px;
+        height: 205px;
+    }
+
+    #container .content .rc .seatPic img {
+        width: 346px;
+        height: 205px;
+    }
+
+    #container .content .rc .search {
+        width: 98px;
+        height: 27px;
+        margin: 15px auto 0;
+    }
+
+    #container .content .rc .seatInfo ul li:nth-child(1) span {
+    }
+
+    #container .content .rc .seatInfo ul li:nth-child(2) span {
+        margin-left: 28px;
+    }
+
+    /*头部返回和主页*/
+    #container .content .fun {
+        width: 100%;
+        height: 52px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 999;
+    }
+
+    #container .content .fun ul {
+        width: 100%;
+        height: 52px;
+    }
+
+    #container .content .fun ul li {
+        width: 50%;
+        height: 52px;
+        line-height: 52px;
+    }
+
+    #container .content .fun ul li:nth-child(1) {
+        float: left;
+    }
+
+    #container .content .fun ul li:nth-child(2) {
+        float: right;
+        text-align: right;
+    }
+
+    #container .content .fun ul li a img {
+        width: 20px;
+        height: 20px;
+    }
+
+    #container .content .fun ul li:nth-child(1) a img {
+        margin-left: 24px;
+    }
+
+    #container .content .fun ul li:nth-child(2) a img {
+        margin-right: 20px;
+    }
+
+
+</style>
+<body>
+<div id="container">
+    <div class="content">
+        <div class="theme">
+            <img src="images/rc-theme.png" alt="">
+        </div>
+        <div class="rc">
+            <div class="seatInfo">
+                <ul>
+                    <li><span>康帝酒店</span></li>
+                    <li><span>座位表</span></li>
+                </ul>
+            </div>
+            <div class="seatPic" id="myphoto1">
+                <img src="images/seatPic.png" alt="">
+            </div>
+            <div class="search" id="myphoto">
+                <img src="images/search.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="fun">
+            <ul>
+                <li><a href="#"><img src="images/rc-fanhui.png" alt=""></a></li>
+                <li><a href="index.html"><img src="images/rc-home.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--放大镜插件必写的-->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <!--<button class="pswp__button pswp__button&#45;&#45;share" title="Share"></button>-->
+
+                <!--<button class="pswp__button pswp__button&#45;&#45;fs" title="Toggle fullscreen"></button>-->
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    $(".fun ul li:first").click(function () {
+        window.history.back(-1);
+    })
+</script>
+
+<script>
+    $(function () {
+        var openPhotoSwipe = function () {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // build items array
+            var items = [
+                {
+                    src: 'images/seatBig.jpg',
+                    w: 1334,
+                    h: 750
+                }
+            ];
+
+            // define options (if needed)
+            var options = {
+                // optionName: 'option value'
+                // for example:
+                index: 0 // start at first slide
+            };
+
+            // Initializes and opens PhotoSwipe
+            var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        }
+
+        var myphoto = document.getElementById('myphoto');
+        var myhoto1 = document.getElementById('myphoto1');
+        myphoto.onclick = function() {
+            var p_id = myphoto.getAttribute('rel');
+            openPhotoSwipe(p_id);
+        }
+        myphoto1.onclick = function() {
+            var p_id = myphoto.getAttribute('rel');
+            openPhotoSwipe(p_id);
+        }
+
+
+    })
+</script>
+</body>
+</html>

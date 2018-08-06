@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>公司</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<style>
+    #container {
+        width: 100%;
+        min-height: 812px;
+        background: #e94620;
+    }
+
+    #container .content {
+        width: 100%;
+        min-height: 812px;
+        background: url("images/rc-bg.png") no-repeat;
+        background-size: 100% 812PX;
+        position: relative;
+    }
+
+    #container .content .theme {
+        width: 100%;
+        height: 217px;
+        position: relative;
+    }
+
+    #container .content .theme img {
+        width: 226px;
+        height: 87px;
+        position: absolute;
+        left: 30px;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+    }
+
+    /*日程*/
+    #container .content .rc {
+        width: 254px;
+        height: auto;
+        margin: 113px auto 0;
+    }
+
+    #container .content .rc ul{
+        width: 254px;
+        height: auto;
+    }
+
+    #container .content .rc ul li{
+        width: 254px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    #container .content .rc ul li span{
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "微软雅黑";
+        letter-spacing: 6px;
+    }
+
+
+
+    /*头部返回和主页*/
+    #container .content .fun{
+        width: 100%;
+        height: 52px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 999;
+    }
+
+    #container .content .fun ul{
+        width: 100%;
+        height: 52px;
+    }
+
+    #container .content .fun ul li{
+        width: 50%;
+        height: 52px;
+        line-height: 52px;
+    }
+
+    #container .content .fun ul li:nth-child(1){
+        float: left;
+    }
+    #container .content .fun ul li:nth-child(2){
+        float: right;
+        text-align: right;
+    }
+
+
+    #container .content .fun ul li a img{
+        width: 20px;
+        height: 20px;
+    }
+
+    #container .content .fun ul li:nth-child(1) a img{
+        margin-left: 24px;
+    }
+
+    #container .content .fun ul li:nth-child(2) a img{
+        margin-right: 20px;
+    }
+
+
+
+</style>
+<body>
+<div id="container">
+    <div class="content">
+        <div class="theme">
+            <img src="images/rc-theme.png" alt="">
+        </div>
+        <div class="rc">
+            <ul>
+                <li><span>XXXXX公司</span></li>
+                <li><span>XXXXX公司</span></li>
+                <li><span>XXXXX公司</span></li>
+                <li><span>XXXXX公司</span></li>
+            </ul>
+        </div>
+
+        <div class="fun">
+            <ul>
+                <li><a href="#"><img src="images/rc-fanhui.png" alt=""></a></li>
+                <li><a href="#"><img src="images/rc-home.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(".fun ul li:first").click(function () {
+        window.history.back(-1);
+    })
+</script>
+</body>
+</html>

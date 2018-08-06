@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>晚宴节目单</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<style>
+    #container {
+        width: 100%;
+        min-height: 812px;
+        background: #e94620;
+    }
+
+    #container .content {
+        width: 100%;
+        min-height: 812px;
+        background: url("images/rc-bg.png") no-repeat;
+        background-size: 100% 812PX;
+        position: relative;
+    }
+
+    #container .content .theme {
+        width: 100%;
+        height: 217px;
+        position: relative;
+    }
+
+    #container .content .theme img {
+        width: 226px;
+        height: 87px;
+        position: absolute;
+        left: 30px;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+    }
+
+    /*日程*/
+    #container .content .rc {
+        width: 203px;
+        height: auto;
+        margin: 13px auto 0;
+    }
+
+    #container .content .rc .rctext {
+        width: 203px;
+        height: 42px;
+        line-height: 42px;
+        text-align: center;
+    }
+
+    #container .content .rc .rctext span {
+        color: #fff;
+        font-size: 20px;
+        font-family: "Microsoft YaHei UI";
+        font-weight: bold;
+        letter-spacing: 4px;
+    }
+
+    #container .content .rc .rcinfo {
+        width: 203px;
+        height: 26px;
+        border-bottom: 2px solid #e69b37;
+        border-image: -webkit-linear-gradient(#ecc741, #e69b37) 30 30;
+        border-image: -o-linear-gradient(#ecc741, #e69b37) 30 30;
+        border-image: -moz-linear-gradient(#ecc741, #e69b37) 30 30;
+        border-image: linear-gradient(#ecc741, #e69b37) 30 30;
+    }
+
+    #container .content .rc .rcinfo ul {
+        width: 203px;
+        height: 24px;
+    }
+
+    #container .content .rc .rcinfo ul li {
+        width: 50%;
+        height: 24px;
+        line-height: 24px;
+        float: left;
+        text-align: center;
+    }
+
+    #container .content .rc .rcinfo ul li span {
+        color: #fff;
+        font-size: 13px;
+        opacity: 0.8;
+    }
+
+    #container .content .rc .rcContent {
+        width: 100%;
+        height: auto;
+        margin-top: 4px;
+    }
+
+    #container .content .rc .rcContent ul {
+        width: 100%;
+        height: auto;
+    }
+
+    #container .content .rc .rcContent ul li {
+        width: 50%;
+        height: 24px;
+        line-height: 24px;
+        float: left;
+        text-align: center;
+    }
+
+    #container .content .rc .rcContent ul li span {
+        color: #fff;
+        font-size: 12px;
+        opacity: 0.8;
+    }
+
+    /*头部返回和主页*/
+    #container .content .fun{
+        width: 100%;
+        height: 52px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 999;
+    }
+
+    #container .content .fun ul{
+        width: 100%;
+        height: 52px;
+    }
+
+    #container .content .fun ul li{
+        width: 50%;
+        height: 52px;
+        line-height: 52px;
+    }
+
+    #container .content .fun ul li:nth-child(1){
+        float: left;
+    }
+    #container .content .fun ul li:nth-child(2){
+        float: right;
+        text-align: right;
+    }
+
+
+    #container .content .fun ul li a img{
+        width: 20px;
+        height: 20px;
+    }
+
+    #container .content .fun ul li:nth-child(1) a img{
+        margin-left: 24px;
+    }
+
+    #container .content .fun ul li:nth-child(2) a img{
+        margin-right: 20px;
+    }
+
+
+
+</style>
+<body>
+<div id="container">
+    <div class="content">
+        <div class="theme">
+            <img src="images/rc-theme.png" alt="">
+        </div>
+        <div class="rc">
+            <div class="rctext">
+                <span>晚宴节目单</span>
+            </div>
+            <div class="rcinfo">
+                <ul>
+                    <li><span>时间</span></li>
+                    <li><span>环节</span></li>
+                </ul>
+            </div>
+            <div class="rcContent">
+                <ul>
+                    <li><span>18:00 - 19:00</span></li>
+                    <li><span>签到入场</span></li>
+                </ul>
+                <ul>
+                    <li><span>19:00 - 19:05</span></li>
+                    <li><span>开场视频</span></li>
+                </ul>
+                <ul>
+                    <li><span>19:00 - 19:05</span></li>
+                    <li><span>主持人开场</span></li>
+                </ul>
+                <ul>
+                    <li><span>19:05 - 19:10</span></li>
+                    <li><span>VIP致辞</span></li>
+                </ul>
+                <ul>
+                    <li><span>19:10 - 19:20</span></li>
+                    <li><span>祝酒</span></li>
+                </ul>
+                <ul>
+                    <li><span>19:20 - 19:35</span></li>
+                    <li><span>乐队表演</span></li>
+                </ul>
+                <ul>
+                    <li><span>19:35 - 19:45</span></li>
+                    <li><span>拾光邮局</span></li>
+                </ul>
+                <ul>
+                    <li><span>19:45 - 20:00</span></li>
+                    <li><span>乐队表演</span></li>
+                </ul>
+                <ul>
+                    <li><span>20:00 - 20:10</span></li>
+                    <li><span>拾光邮局</span></li>
+                </ul>
+                <ul>
+                    <li><span>20:10 - 20:30</span></li>
+                    <li><span>乐队表演</span></li>
+                </ul>
+                <ul>
+                    <li><span>20:30 - 21:30</span></li>
+                    <li><span>合演</span></li>
+                </ul>
+                <ul>
+                    <li><span>21:30 - 22:00</span></li>
+                    <li><span>晚宴结束</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="fun">
+            <ul>
+                <li><a href="#"><img src="images/rc-fanhui.png" alt=""></a></li>
+                <li><a href="index.html"><img src="images/rc-home.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(".fun ul li:first").click(function () {
+        window.history.back(-1);
+    })
+</script>
+</body>
+</html>

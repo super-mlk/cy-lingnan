@@ -1,0 +1,89 @@
+﻿* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, a, img, th, td, form, fieldset, iframe, object, pre, code, legend, blockquote {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+ font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+  min-width: 320px;
+  margin:0;
+}
+input:focus{outline:none;box-shadow:none;border:solid 1px #ccc}
+.hide {
+    display: none;
+}
+
+
+img {
+    border: 0;
+    max-width:100%;
+    vertical-align:middle;
+}
+
+.clear {
+    clear: both;
+    height: 0px;
+    overflow: hidden;
+    font-size: 0px;
+}
+
+.form-control{font-size:1em!important;}
+@media screen and (min-width:480px) {
+    body {
+        font-size: 21px;
+    }
+}
+
+@media screen and (min-width:640px) {
+    body {
+        font-size: 21px;
+    }
+
+    .content {
+        width: 640px;
+        margin: auto auto;
+    }
+}
+
+html {
+    -ms-touch-action: none;
+}
+ul, li {
+    list-style: none outside none;
+}
+
+@font-face {
+
+     font-family: 'apexnew';
+ src: url('../font/apexnew.eot');
+ src:local('apexnew'),
+        url('../font/apexnew.woff') format('woff'),
+        url('../font/apexnew.ttf') format('truetype'),
+        url('../font/apexnew.svg#apexnew') format('svg');
+}
+@font-face {
+
+     font-family: 'hyzhj';
+ src: url('../font/hyzhj.eot');
+ src:local('hyzhj'),
+        url('../font/hyzhj.woff') format('woff'),
+        url('../font/hyzhj.ttf') format('truetype'),
+        url('../font/hyzhj.svg#hyzhj') format('svg');
+}
+a,a:hover,a:active,a:visited,a:link,a:focus{-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+-webkit-user-select: none;
+-moz-user-focus: none;
+-moz-user-select: none;}
+a{text-decoration:none;}

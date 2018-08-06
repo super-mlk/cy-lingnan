@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>岭南首页</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <style>
+        #container{
+            width: 100%;
+            min-height: 812px;
+            position: relative;
+            background: url("images/bg.png") repeat-y;
+            background-size: 100% 100%;
+        }
+
+        /*头部图片*/
+        #container .header{
+            width: 100%;
+            height: 106px;
+            background: url("images/index-1.png") no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /*岭南股份信息*/
+        #container .content{
+            width: 100%;
+            height: 123px;
+            background: url("images/index-2.png") no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 106px;
+            left: 0;
+        }
+
+        /*操作功能*/
+        #container .fun{
+            width: 100%;
+            height: 253px;
+            position: absolute;
+            top: 249px;
+            left: 0;
+        }
+
+        #container .fun .btn{
+            width: 234px;
+            height: 201px;
+            margin: 0 auto;
+        }
+        #container .fun .btn ul{
+            width: 234px;
+            height: 210px;
+        }
+
+        #container .fun .btn ul li{
+            width: 78px;
+            height: 210px;
+            float: left;
+        }
+
+        #container .fun .btn ul li a img{
+            width: 78px;
+            height: 87px;
+        }
+
+        #container .fun .btn ul li:nth-child(2){
+            position: relative;
+        }
+
+        #container .fun .btn ul li:nth-child(2) a img{
+            width: 70px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        /*底部图片*/
+        #container .footer{
+            width: 100%;
+            height: 106px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!--头部-->
+        <div class="header"></div>
+
+        <!--岭南股份信息-->
+        <div class="content"></div>
+
+        <!--功能-->
+        <div class="fun">
+            <div class="btn">
+                <ul>
+                    <li><a href="#"><img src="images/zfdm.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/yzp.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/info.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--底部-->
+        <div class="footer"></div>
+    </div>
+</body>
+</html>
